@@ -45,3 +45,43 @@ echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.co
 `sudo apt-get update
 sudo apt-get install helm
 `
+
+## Verifying Helm Binaries
+Each Helm release includes cryptographic signatures that confirm the binary was built and signed by Helm maintainers. To help protect against supply chain attacks, you should always verify the authenticity of Helm binaries before installing.
+
+Published release assets on get.helm.sh (served through a CDN) generally cannot be altered after a GitHub release is published. However, the supply chain involves multiple components (CDN, hosting infrastructure, and so on), so signature verification is important even for older or pinned versions.
+
+Requirements
+To verify a Helm binary, you need the following:
+
+The binary archive (for example, helm-v4.0.0-linux-amd64.tar.gz)
+The corresponding signature file (for example, helm-v4.0.0-linux-amd64.tar.gz.asc)
+The Helm maintainers' public PGP keys
+
+Verification Steps
+To verify a Helm binary:
+
+## Verify the SHA256 checksum to confirm the download wasn't corrupted. For example:
+
+`$ sha256sum -c helm-v4.0.0-linux-amd64.tar.gz.sha256sum
+helm-v4.0.0-linux-amd64.tar.gz: OK`
+
+Import the Helm maintainers' public keys:
+
+`$ curl https://raw.githubusercontent.com/helm/helm/main/KEYS | gpg --import`
+
+note
+Avoid fetching keys from the Helm repository each time you verify a Helm binary. Instead, import the keys one time and then store them in a secure location you control. This protects you if the repository is ever compromised and keys are swapped; your local copy lets you detect the tampering.
+
+You can also cross-check maintainer keys on Keybase, where Helm maintainers have profiles linking their identities to their PGP keys.
+
+Verify the binary's signature. For example:
+
+`$ gpg --verify helm-v4.0.0-linux-amd64.tar.gz.asc helm-v4.0.0-linux-amd64.tar.gz
+gpg: Signature made [date] using RSA key ID [key-id]
+gpg: Good signature from "Helm Maintainer <maintainer@example.com>"`
+
+A "Good signature" message confirms the binary is authentic and hasn't been tampered with.
+
+note
+Signature files are safe to pull from upstream as long as you have trusted copies of the public keys. An attacker cannot forge a valid signature without the private key, which only the legitimate maintainer has.

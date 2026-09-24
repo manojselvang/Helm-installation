@@ -138,3 +138,103 @@ push a chart to remote
 📄️
 helm registry
 login to or logout from a registry
+
+📄️
+helm registry login
+login to a registry
+
+📄️
+helm registry logout
+logout from a registry
+
+📄️
+helm repo
+add, list, remove, update, and index chart repositories
+
+📄️
+helm repo add
+add a chart repository
+
+📄️
+helm repo index
+generate an index file given a directory containing packaged charts
+
+📄️
+helm repo list
+list chart repositories
+
+📄️
+helm repo remove
+remove one or more chart repositories
+
+📄️
+helm repo update
+update information of available charts locally from chart repositories
+
+📄️
+helm rollback
+roll back a release to a previous revision
+
+📄️
+helm search
+search for a keyword in charts
+
+📄️
+helm search hub
+search for charts in the Artifact Hub or your own hub instance
+
+📄️
+helm search repo
+search repositories for a keyword in charts
+
+📄️
+helm show
+show information of a chart
+
+📄️
+helm show all
+show all information of the chart
+
+📄️
+helm show chart
+show the chart's definition
+
+📄️
+helm show crds
+show the chart's CRDs
+
+📄️
+helm show readme
+show the chart's README
+
+📄️
+helm show values
+show the chart's values
+
+📄️
+helm status
+display the status of the named release
+
+📄️
+helm template
+locally render templates
+
+📄️
+helm test
+run tests for a release
+
+📄️
+helm uninstall
+uninstall a release
+
+📄️
+helm upgrade
+upgrade a release
+
+📄️
+helm verify
+verify that a chart at the given path has been signed and is valid
+
+📄️
+helm version
+print the helm version information

@@ -1,0 +1,140 @@
+DocsHelm Commands
+Version: 4.3.0
+Helm Commands
+Here you'll find the list of CLI commands for Helm, with help info on their usage.
+
+📄️
+helm
+The Helm package manager for Kubernetes.
+
+📄️
+helm completion
+generate autocompletion scripts for the specified shell
+
+📄️
+helm completion bash
+generate autocompletion script for bash
+
+📄️
+helm completion fish
+generate autocompletion script for fish
+
+📄️
+helm completion powershell
+generate autocompletion script for powershell
+
+📄️
+helm completion zsh
+generate autocompletion script for zsh
+
+📄️
+helm create
+create a new chart with the given name
+
+📄️
+helm dependency
+manage a chart's dependencies
+
+📄️
+helm dependency build
+rebuild the charts/ directory based on the Chart.lock file
+
+📄️
+helm dependency list
+list the dependencies for the given chart
+
+📄️
+helm dependency update
+update charts/ based on the contents of Chart.yaml
+
+📄️
+helm env
+helm client environment information
+
+📄️
+helm get
+download extended information of a named release
+
+📄️
+helm get all
+download all information for a named release
+
+📄️
+helm get hooks
+download all hooks for a named release
+
+📄️
+helm get manifest
+download the manifest for a named release
+
+📄️
+helm get metadata
+This command fetches metadata for a given release
+
+📄️
+helm get notes
+download the notes for a named release
+
+📄️
+helm get values
+download the values file for a named release
+
+📄️
+helm history
+fetch release history
+
+📄️
+helm install
+install a chart
+
+📄️
+helm lint
+examine a chart for possible issues
+
+📄️
+helm list
+list releases
+
+📄️
+helm package
+package a chart directory into a chart archive
+
+📄️
+helm plugin
+install, list, or uninstall Helm plugins
+
+📄️
+helm plugin install
+install a Helm plugin
+
+📄️
+helm plugin list
+list installed Helm plugins
+
+📄️
+helm plugin package
+package a plugin directory into a plugin archive
+
+📄️
+helm plugin uninstall
+uninstall one or more Helm plugins
+
+📄️
+helm plugin update
+update one or more Helm plugins
+
+📄️
+helm plugin verify
+verify that a plugin at the given path has been signed and is valid
+
+📄️
+helm pull
+download a chart from a repository and (optionally) unpack it in local directory
+
+📄️
+helm push
+push a chart to remote
+
+📄️
+helm registry
+login to or logout from a registry
